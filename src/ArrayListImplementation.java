@@ -17,8 +17,11 @@ public class ArrayListImplementation {
         lista.add("Olaf");
         lista.add("Olaf");
         lista.add("Olaf");
-        lista.add("Olaf");
 
-        lista.size();
+        System.out.println("Wielkosc listy: " + lista.size());
+
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println((i + 1) + "\t" + lista.get(i));
+        }
     }
 }
