@@ -23,5 +23,12 @@ public class ArrayListImplementation {
         for (int i = 0; i < lista.size(); i++) {
             System.out.println((i + 1) + "\t" + lista.get(i));
         }
+
+        lista.remove(2);
+
+        System.out.println("\n");
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println((i + 1) + "\t" + lista.get(i));
+        }
     }
 }

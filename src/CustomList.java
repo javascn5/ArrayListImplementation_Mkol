@@ -19,7 +19,7 @@ public class CustomList<E> {        //tworzymy klase generyczną
         elements[size++] = e;
     }
 
-    public void resize() {                               //powiekszenie tablicy x2
+    public void resize() {                               //powiekszenie tablicy +10
         int newSize = elements.length + 10;
         Object[] elements2 = new Object[newSize];
         for (int i = 0; i < elements.length; i++) {
@@ -36,6 +36,13 @@ public class CustomList<E> {        //tworzymy klase generyczną
             throw new IndexOutOfBoundsException("Nie ma takiego elementu");
         }
         return (E) elements[i];
+    }
+
+    public void remove(int index) {
+        for (int i = index - 1; i < size; i++) {
+            elements[i] = elements[i + 1];
+        }
+        size--;
     }
 
 
